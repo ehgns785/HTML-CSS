@@ -43,7 +43,28 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">회원 등급</label>
             <div class="col-sm-10">
-            <label class="col-sm-2 control-label" for="textinput">회원 등급</label>
+		<style>
+			select {
+				width: 200px;
+				padding: .8em .5em;
+				border: 1px solid #999;
+				font-family: inherit;
+				background: url('arrow.jpg') no-repeat 95% 50%;
+				border-radius: 0px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+
+			select::-ms-expand {
+   			 display: none;
+			}
+		</style>
+		<select>
+			<option>일반 회원</option>
+			<option>프리미엄 회원</option>
+			<option>VIP 회원</option>
+		</select>
 			</div>
           </div>
 
