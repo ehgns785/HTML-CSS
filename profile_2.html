@@ -1,55 +1,48 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
-<HEAD>
-<meta charset=utf-8" />
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<TITLE> New Document </TITLE>
-<META NAME="Generator" CONTENT="EditPlus">
-<META NAME="Author" CONTENT="">
-<META NAME="Keywords" CONTENT="">
-<META NAME="Description" CONTENT="">
-</HEAD>
-<BODY>
+ <HEAD>	
+	<meta charset=utf-8" />
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">  
+ </HEAD>
+ <BODY>
 
 <!------ Include the above in your HEAD tag ---------->
 
-<div class="row">
-  <div class="col-md-4 col-md-offset-4">
-    <form class="form-horizontal" role="form">
-    <fieldset>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <form class="form-horizontal" role="form">
+        <fieldset>
 
-    <!-- Form Name -->
-    <legend>Address Details</legend>
+          <!-- Form Name -->
+          <legend>Address Details</legend>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">ID</label>
-      <div class="col-sm-10">
-        <input type="text" placeholder="user_id" class="form-control" style="width:100px;">
-      </div>
-    </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">ID</label>
+            <div class="col-sm-10">
+			  <p class="form-control-static">ID</p>
+            </div>
+          </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">이름</label>
-      <div class="col-sm-10">
-        <input type="text" placeholder="user_name" class="form-control" style="width:100px;">
-      </div>
-    </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">이름</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="Name" class="form-control">
+            </div>
+          </div>
 
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">E-MAIL</label>
-      <div class="col-sm-10">
-        <input type="text" placeholder="user_email" class="form-control" style="width:100px;">
-      </div>
-    </div>
-
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">회원 등급</label>
-      <div class="col-sm-10">
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">회원 등급</label>
+            <div class="col-sm-10">
 		<style>
 			select {
 				width: 200px;
@@ -67,92 +60,84 @@
    			 display: none;
 			}
 		</style>
-        <select>
-        <option>일반 회원</option>
-        <option>프리미엄 회원</option>
-        <option>VIP 회원</option>
-        </select>
-      </div>
-    </div>
+		<select>
+			<option>일반 회원</option>
+			<option>프리미엄 회원</option>
+			<option>VIP 회원</option>
+		</select>
+			</div>
+          </div>
 
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">총 결제금액</label>
-      <div class="col-sm-10">
-        <input type="text" placeholder="user_account" class="form-control" style="width:100px;">
-      </div>
-    </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">가입일</label>
+            <div class="col-sm-4">
+			  <p class="form-control-static">2020.11.05</p>
+            </div>
+
+            <label class="col-sm-2 control-label" for="textinput">포인트</label>
+            <div class="col-sm-4">
+			  <p class="form-control-static">Point</p>
+            </div>
+          </div>
 
 
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">전공</label>
-      <div class="col-sm-10">
-        <input type="text" placeholder="user_major" class="form-control" style="width:100px;">
-      </div>
-    </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">최종 방문일</label>
+            <div class="col-sm-10">
+			  <p class="form-control-static">Last Visit</p>
+            </div>
+          </div>
 
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">포인트</label>
-      <div class="col-sm-4">
-        <input type="text" placeholder="user_point" class="form-control" style="width:100px;">
-      </div>
-    </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">전공</label>
+            <div class="col-sm-10">
+              <input type="text" placeholder="major" class="form-control">
+            </div>
+          </div>
 
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">가입날짜</label>
-      <div class="col-sm-4">
-        <input type="text" placeholder="date" class="form-control" style="width:100px;">
-      </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">누적 결제액</label>
+            <div class="col-sm-10">
+			  <p class="form-control-static">total</p>
+            </div>
+          </div>
 
-    </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">프리미엄 회원 만료일</label>
+            <div class="col-sm-10">
+			  <p class="form-control-static">End primium Date</p>
+            </div>
+          </div>
 
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">프리미엄 회원 시작일</label>
-      <div class="col-sm-10">
-        <input type="text" placeholder="startpdt_date" class="form-control" style="width:100px;">
-      </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">이력서</label>
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-default">공개</button>
+                <button type="submit" class="btn btn-default">비공개</button>
+            </div>
+          </div>
 
-      <label class="col-sm-2 control-label" for="textinput">프리미엄 회원 만료일</label>
-      <div class="col-sm-10">
-        <input type="text" placeholder="endpdt_date" class="form-control" style="width:100px;">
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">회원상태(휴면)</label>
-      <div class="col-sm-10">
-        <input type="text" placeholder="user_state" class="form-control" style="width:100px;">
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput">이력서</label>
-      <div class="col-sm-10">
-        <button type="submit" class="btn btn-default">공개</button>
-        <button type="submit" class="btn btn-default">비공개</button>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="pull-right">
-        <button type="submit" class="btn btn-default">포인트</button>
-        <button type="submit" class="btn btn-default">문의 내역</button>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <div class="pull-right">
-          <button type="submit" class="btn btn-primary">저장</button>
-          <button type="submit" class="btn btn-default">닫기</button>
+	<div class="form-group">
+            <div class="pull-right">
+                <button type="submit" class="btn btn-default">포인트</button>
+                <button type="submit" class="btn btn-default">문의 내역</button>
+            </div>
         </div>
-      </div>
-    </div>
 
-    </fieldset>
-    </form>
-  </div>
-  <!-- /.col-lg-12 -->
-</div>
-<!-- /.row -->
-</BODY>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <button type="submit" class="btn btn-primary">저장</button>
+                <button type="submit" class="btn btn-default">닫기</button>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+    </div><!-- /.col-lg-12 -->
+</div><!-- /.row -->
+ </BODY>
 </HTML>
