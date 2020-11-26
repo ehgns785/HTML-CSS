@@ -26,13 +26,6 @@
     <!-- Text input-->
 
     <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput" style="padding-left:0px;">조회수</label>
-      <div class="col-sm-10">
-        <input type="text" placeholder="view_cnt" class="form-control" style="width:150;">
-      </div>
-    </div>
-
-    <div class="form-group">
       <label class="col-sm-2 control-label" for="textinput" style="padding-left:0px;">교육자료번호</label>
       <div class="col-sm-10">
         <input type="text" placeholder="educate_num" class="form-control" style="width:150;">
@@ -42,7 +35,28 @@
     <div class="form-group">
       <label class="col-sm-2 control-label" for="textinput" style="padding-left:0px;">교육자료종류</label>
       <div class="col-sm-10">
-        <input type="text" placeholder="cate_code" class="form-control" style="width:150;">
+		<style>
+			select {
+				width: 200px;
+				padding: .8em .5em;
+				border: 1px solid #999;
+				font-family: inherit;
+				background: url('arrow.jpg') no-repeat 95% 50%;
+				border-radius: 0px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+
+			select::-ms-expand {
+   			 display: none;
+			}
+		</style>
+        <select>
+        <option>일반 회원</option>
+        <option>프리미엄 회원</option>
+        <option>VIP 회원</option>
+        </select>
       </div>
     </div>
 
@@ -57,21 +71,66 @@
     <div class="form-group">
       <label class="col-sm-2 control-label" for="textinput" style="padding-left:0px;">교육자료출처</label>
       <div class="col-sm-10">
-        <input type="text" placeholder="educate_source" class="form-control" style="width:150;">
+		<style>
+			select {
+				width: 200px;
+				padding: .8em .5em;
+				border: 1px solid #999;
+				font-family: inherit;
+				background: url('arrow.jpg') no-repeat 95% 50%;
+				border-radius: 0px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+
+			select::-ms-expand {
+   			 display: none;
+			}
+		</style>
+        <select>
+        <option>한국교육개발원</option>
+        <option>CBT</option>
+        <option>한국사능력</option>
+        <option>스터디웨이</option>
+        <option>대학솔루션</option>
+        <option>독취사</option>
+        <option>YBM</option>
+        </select>
       </div>
     </div>
 
     <div class="form-group">
       <label class="col-sm-2 control-label" for="textinput" style="padding-left:0px;">교육자료내용</label>
       <div class="col-sm-10">
-        <input type="text" placeholder="educate_content" class="form-control" style="height:200px;">
-      </div>
-    </div>
+		<style>
+			select {
+				width: 200px;
+				padding: .8em .5em;
+				border: 1px solid #999;
+				font-family: inherit;
+				background: url('arrow.jpg') no-repeat 95% 50%;
+				border-radius: 0px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
 
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="textinput" style="padding-left:0px;">교육이미지</label>
-      <div class="com-sm-10">
-        <img src="./arrow.jpg" alt="" width="300px;" height="300px;">
+			select::-ms-expand {
+   			 display: none;
+			}
+		</style>
+        <select>
+        <option>자격증 분류</option>
+        <option>IT</option>
+        <option>말하기</option>
+        <option>한국사</option>
+        <option>경영/세무/회계</option>
+        <option>국가공인자격증</option>
+        <option>문화/예술/디자인/방송</option>
+        <option>건축</option>
+        <option>면허</option>
+        </select>
       </div>
     </div>
 
