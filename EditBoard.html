@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,7 +13,6 @@
 	}
 
 	.table > thead > tr > th, .table > tbody > tr > th {
-	background-color: #e6ecff;
 	text-align: center;
 	}
 	</style>
@@ -23,9 +22,9 @@
 <form action="/bbs/update.bbs" method="post">
 
 <div id="contentForm">
-  <input type="hidden" name="pageNum" value="${pageNum}">
+  <input type="hidden" name="pageNum" value="$Page_Num">
 
-  <input type="hidden" name="articleNumber" value="${article.articleNumber}">
+  <input type="hidden" name="articleNumber" value="View_cnt">
 
   <div class="input-group input-group-sm" role="group" aria-label="...">
 
@@ -34,14 +33,12 @@
     <thead>
     <tr>
       <th width="30%">글쓴이</th>
-
-      <td width="70%">${id}</td>
-
+      <td width="70%">User_id</td>
     </tr>
     <tr>
       <th style="padding-top: 15px">제목</th>
       <td>
-        <input type="text" name="title" value="${article.title}"
+        <input type="text" name="title" value="Title"
         class="form-control" aria-describedby="basic-addon1"></td>
       </tr>
 
@@ -50,13 +47,7 @@
       <tbody>
       <tr>
         <td colspan="2">
-          <textarea class="form-control" rows="20" name="content" >${article.content}</textarea>
-        </td>
-      </tr>
-      <tr>
-        <th style="padding-top: 15px">첨부파일</th>
-        <td>
-          <input type="file" class="btn btn-default" name="fileName">
+          <textarea class="form-control" rows="20" name="board_content" >Contents Board~~~~~~~~~~</textarea>
         </td>
       </tr>
       </tbody>
@@ -68,10 +59,5 @@
     </div>
   </div>
   </form>
-
-
-
-
-
   </BODY>
   </HTML>
