@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-<meta charset="UTF-8">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta charset=utf-8" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
     <style>
       * {
         font-size: 12px;
@@ -15,91 +20,39 @@
         height: 200px;
       }
     </style>
+</HEAD>
+<BODY>
 
+<!------ Include the above in your HEAD tag ---------->
 
-<!-- Bootstrap CSS -->
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <form class="form-horizontal" role="form">
+    <fieldset>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Form Name -->
+    <legend>Address Details</legend>
 
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="textinput">ID</label>
+      <div class="col-sm-4">
+        <input type="text" placeholder="user_id" class="form-control" style="width:100px;">
+      </div>
 
-
-<title>board</title>
-
-
-
-<script>
-
-$(document).on('click', '#btnSave', function(e){
-
-e.preventDefault();
-
-
-
-$("#form").submit();
-
-});
-
-
-
-$(document).on('click', '#btnList', function(e){
-
-e.preventDefault();
-
-
-
-location.href="${pageContext.request.contextPath}/board/getBoardList";
-
-});
-
-</script>
-
-<style>
-
-body {
-
-  padding-top: 70px;
-
-  padding-bottom: 30px;
-
-}
-
-
-
-</style>
-
-</head>
-
-<body>
-
-<article>
-
-<div class="container" role="main">
-
-  <h2>board Form</h2>
-
-  <form name="form" id="form" role="form" method="post" action="${pageContext.request.contextPath}/board/saveBoard">
-
-  <div class="mb-3">
-
-    <label for="title">제목</label>
-
-    <input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력해 주세요">
-
-  </div>
-
-
-
-  <div class="form-group">
-    <label class="mb-3 control-label" for="textinput">ID</label>
-    <div class="col-sm-4">
-      <input type="text" placeholder="user_id" class="form-control" style="width:100px;">
+      <label class="col-sm-2 control-label" for="textinput">이름</label>
+      <div class="col-sm-4">
+        <input type="text" placeholder="user_name" class="form-control" style="width:100px;">
+      </div>
     </div>
 
-    <label class="mb-3 control-label" for="textinput">분류</label>
-    <div class="col-sm-4">
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="textinput">회원 등급</label>
+      <div class="col-sm-10">
 		<style>
 			select {
-				width: 150px;
+				width: 200px;
 				padding: .8em .5em;
 				border: 1px solid #999;
 				font-family: inherit;
@@ -114,27 +67,25 @@ body {
    			 display: none;
 			}
 		</style>
-		<select>
-        <option>일반 게시판</option>
-        <option>QnA</option>
-        <option>공지</option>
+        <select>
+        <option>일반 회원</option>
+        <option>프리미엄 회원</option>
+        <option>VIP 회원</option>
         </select>
+      </div>
     </div>
-  </div>
 
+	
 
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="textinput">내용</label>
+      <div class="col-sm-10">
+        <p><textarea>
+게시판 내용
 
-  <div class="mb-3">
-
-    <label for="content">내용</label>
-
-    <textarea class="form-control" rows="5" name="content" id="content" placeholder="내용을 입력해 주세요" ></textarea>
-
-  </div>
-
-
-
-  </form>
+        </textarea></p>
+      </div>
+    </div>
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
@@ -145,10 +96,11 @@ body {
       </div>
     </div>
 
+    </fieldset>
+    </form>
+  </div>
+  <!-- /.col-lg-12 -->
 </div>
-
-</article>
-
-</body>
-
-</html>
+<!-- /.row -->
+</BODY>
+</HTML>
