@@ -12,17 +12,44 @@
     <div class="container-fluid">
         <div class="col-lg-8"><!--게시판 넓이 -->
             <div class="col-lg-12">
-                <h1 class="page-header">공지사항 관리</h1>
+                <h1 class="page-header">게시판 관리</h1>
             </div>
             <div class="row">
                   <div class="col-lg-12">
                       <button type="button" class="btn btn-outline btn-primary pull-right">
-                          <i class="fa fa-edit fa-fw"></i> 공지사항 작성
+                          <i class="fa fa-edit fa-fw"></i> 게시글 작성
                       </button>
                   </div>
               </div>
+              <div class="form-group">
+      <label class="col-sm-2 control-label" for="textinput">게시판 분류</label>
+      <div class="col-sm-10">
+		<style>
+			select {
+				width: 200px;
+				padding: .8em .5em;
+				border: 1px solid #999;
+				font-family: inherit;
+				background: url('arrow.jpg') no-repeat 95% 50%;
+				border-radius: 0px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+
+			select::-ms-expand {
+   			 display: none;
+			}
+		</style>
+        <select>
+        <option>일반 게시판</option>
+        <option>QnA</option>
+        <option>공지사항</option>
+        </select>
+      </div>
+    </div>
             <div class="panel panel-default">
-                <div class="panel-heading">공지사항 </div>
+                <div class="panel-heading">게시글 </div>
                 <div class="panel-body">
                     <table class="table table-hover">
                         <thead>
