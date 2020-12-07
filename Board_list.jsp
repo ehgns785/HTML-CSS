@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-<%@ taglib prefix="c"      uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,29 +24,6 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="form-group">
         <label class="col-sm-2 control-label" for="textinput">게시판 분류</label>
-        <div class="col-sm-10">
-		<style>
-			select {
-				width: 200px;
-				padding: .8em .5em;
-				border: 1px solid #999;
-				font-family: inherit;
-				background: url('arrow.jpg') no-repeat 95% 50%;
-				border-radius: 0px;
-				-webkit-appearance: none;
-				-moz-appearance: none;
-				appearance: none;
-			}
-			select::-ms-expand {
-   			 display: none;
-			}
-		</style>
-          <select>
-          <option>일반 게시판</option>
-          <option>QnA</option>
-          <option>공지사항</option>
-          </select>
-        </div>
       </div>
       <div class="panel panel-default">
         <div class="panel-heading">게시글 </div>
