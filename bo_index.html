@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,40 +30,40 @@ pageEncoding="UTF-8"%>
 <script>
 $(function(){
 
-//¸ñ·Ï ¹öÆ°
+//ëª©ë¡ ë²„íŠ¼
 $("#btnList").click(function(){
 location.href="list.do";
 });
 
 
-//¼öÁ¤ ¹öÆ°
+//ìˆ˜ì • ë²„íŠ¼
 $("#btnUpdate").click(function(){
-if(confirm("¼öÁ¤ÇÏ½Ã°Ú½À´Ï±î?")){
+if(confirm("ìˆ˜ì •í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")){
 document.form1.action="update.do";
 document.form1.submit();
 }
 });
 
 
-//´ñ±Û¾²±â ¹öÆ° (¹öÆ°À» ´­·¯¼­ id°ªÀÌ ³Ñ¾î¿Í¼­ ½ÇÇàµÇ´Â ÀÚ¹Ù½ºÅ©¸³Æ® ±¸¹®)
+//ëŒ“ê¸€ì“°ê¸° ë²„íŠ¼ (ë²„íŠ¼ì„ ëˆŒëŸ¬ì„œ idê°’ì´ ë„˜ì–´ì™€ì„œ ì‹¤í–‰ë˜ëŠ” ìë°”ìŠ¤í¬ë¦½íŠ¸ êµ¬ë¬¸)
 listReply();
 
 
 $("#btnReply").click(function(){
-if(confirm("´ñ±ÛÀ» ÀÛ¼ºÇÏ½Ã°Ú½À´Ï±î?")){
-var r_content = $("#r_content").val();    //´ñ±ÛÀÇ ³»¿ë
+if(confirm("ëŒ“ê¸€ì„ ì‘ì„±í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")){
+var r_content = $("#r_content").val();    //ëŒ“ê¸€ì˜ ë‚´ìš©
 var member_bno =  "${dto.member_bno}";
 var params = {"r_content" : r_content, "member_bno" : member_bno};
 
 
 $.ajax({
-type: "post", //µ¥ÀÌÅÍ¸¦ º¸³¾ ¹æ½Ä
-url: "reply_insert.do", //µ¥ÀÌÅÍ¸¦ º¸³¾ url
-data: params, //º¸³¾ µ¥ÀÌÅÍ
+type: "post", //ë°ì´í„°ë¥¼ ë³´ë‚¼ ë°©ì‹
+url: "reply_insert.do", //ë°ì´í„°ë¥¼ ë³´ë‚¼ url
+data: params, //ë³´ë‚¼ ë°ì´í„°
 
 
-complete : function(data){//µ¥ÀÌÅÍ¸¦ º¸³»´Â °ÍÀÌ ¼º°øÇßÀ» ½Ã Ãâ·ÂµÇ´Â ¸Ş½ÃÁö
-alert("´ñ±ÛÀÌ µî·ÏµÇ¾ú½À´Ï´Ù.");
+complete : function(data){//ë°ì´í„°ë¥¼ ë³´ë‚´ëŠ” ê²ƒì´ ì„±ê³µí–ˆì„ ì‹œ ì¶œë ¥ë˜ëŠ” ë©”ì‹œì§€
+alert("ëŒ“ê¸€ì´ ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.");
 listReply2();
 }
 });
@@ -74,14 +72,14 @@ listReply2();
 });
 
 
-//´ñ±Û ¸ñ·ÏÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
+//ëŒ“ê¸€ ëª©ë¡ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
 function listReply(){
 $.ajax({
-type: "get",    //get¹æ½ÄÀ¸·Î ÀÚ·á¸¦ Àü´Ş
-url: "reply_list.do?member_bno=${dto.member_bno}&curPage=${curPage}&search_option=${search_option}&keyword=${keyword}",    //ÄÁÆ®·Ñ·¯¿¡ ÀÖ´Â list.do·Î ¸ÊÇÎµÇ°í °Ô½Ã±Û ¹øÈ£µµ °°ÀÌ º¸³½´Ù.
-success: function(result){    //ÀÚ·á¸¦ º¸³»´Â°ÍÀÌ ¼º°øÇßÀ»¶§ Ãâ·ÂµÇ´Â ¸Ş½ÃÁö
+type: "get",    //getë°©ì‹ìœ¼ë¡œ ìë£Œë¥¼ ì „ë‹¬
+url: "reply_list.do?member_bno=${dto.member_bno}&curPage=${curPage}&search_option=${search_option}&keyword=${keyword}",    //ì»¨íŠ¸ë¡¤ëŸ¬ì— ìˆëŠ” list.doë¡œ ë§µí•‘ë˜ê³  ê²Œì‹œê¸€ ë²ˆí˜¸ë„ ê°™ì´ ë³´ë‚¸ë‹¤.
+success: function(result){    //ìë£Œë¥¼ ë³´ë‚´ëŠ”ê²ƒì´ ì„±ê³µí–ˆì„ë•Œ ì¶œë ¥ë˜ëŠ” ë©”ì‹œì§€
 
-//´ñ±Û¸ñ·ÏÀ» ½ÇÇàÇÑ °á°ú¸¦ °¡Á®¿Â´Ù.
+//ëŒ“ê¸€ëª©ë¡ì„ ì‹¤í–‰í•œ ê²°ê³¼ë¥¼ ê°€ì ¸ì˜¨ë‹¤.
 $("#listReply").html(result);
 }
 });
@@ -98,10 +96,10 @@ console.log(result);
 var output="<table>";
 for(var i in result){
 var repl=result[i].replytext;
-repl = repl.replace(/  /gi,"&nbsp;&nbsp;");//°ø¹éÃ³¸®
-repl = repl.replace(/</gi,"&lt;"); //ÅÂ±×¹®ÀÚ Ã³¸®
+repl = repl.replace(/  /gi,"&nbsp;&nbsp;");//ê³µë°±ì²˜ë¦¬
+repl = repl.replace(/</gi,"&lt;"); //íƒœê·¸ë¬¸ì ì²˜ë¦¬
 repl = repl.replace(/>/gi,"&gt;");
-repl = repl.replace(/\n/gi,"<br>"); //ÁÙ¹Ù²Ş Ã³¸®
+repl = repl.replace(/\n/gi,"<br>"); //ì¤„ë°”ê¿ˆ ì²˜ë¦¬
 
 output += "<tr><td>"+result[i].name;
 date = changeDate(result[i].regdate);
@@ -115,22 +113,22 @@ $("#listReply").html(output);
 }
 
 
-//»èÁ¦ ¹öÆ°
+//ì‚­ì œ ë²„íŠ¼
 $("#btnDelete").click(function(){
-if(confirm("»èÁ¦ÇÏ½Ã°Ú½À´Ï±î?")){
+if(confirm("ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?")){
 document.form1.action="delete.do";
 document.form1.submit();
 }
 });
 
 
-//ÃßÃµÇÏ±â ¹öÆ°
+//ì¶”ì²œí•˜ê¸° ë²„íŠ¼
 $("#btnRecommend").click(function(){
-if(confirm("ÇØ´ç ±ÛÀ» ÃßÃµÇÏ½Ã°Ú½À´Ï±î?")){
+if(confirm("í•´ë‹¹ ê¸€ì„ ì¶”ì²œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?")){
 document.form1.action="recommend.do";
 document.form1.submit();
 
-alert("ÇØ´ç ±ÛÀ» ÃßÃµÇÏ¿´½À´Ï´Ù.")
+alert("í•´ë‹¹ ê¸€ì„ ì¶”ì²œí•˜ì˜€ìŠµë‹ˆë‹¤.")
 
 }
 
@@ -141,14 +139,13 @@ alert("ÇØ´ç ±ÛÀ» ÃßÃµÇÏ¿´½À´Ï´Ù.")
 
 </script>
 
-<h2>°Ô½Ã¹° º¸±â </h2> Á¶È¸¼ö : ${dto.viewcnt}
-<!-- °Ô½Ã¹°À» ÀÛ¼ºÇÏ±â À§ÇØ ÄÁÆ®·Ñ·¯ÀÇ insert.do·Î ¸ÊÇÎ -->
+<h2>ê²Œì‹œë¬¼ ë³´ê¸° </h2> ì¡°íšŒìˆ˜ : ${dto.viewcnt}
 <form id="form1" name="form1" method="post" action="${path}/board/insert.do">
 <div class="input-group input-group-sm" role="group" style = "text-align:left">
   <table class="table table-striped table-bordered">
   <tread>
   <tr>
-    <td><input type = "hidden" id = "member_bno" name = "member_bno" class="form-control" aria-describedby="basic-addon1" value = "${dto.member_bno }" class="form-control" aria-describedby="basic-addon1" >±Û¹øÈ£ : ${dto.member_bno }</td>
+    <td><input type = "hidden" id = "member_bno" name = "member_bno" class="form-control" aria-describedby="basic-addon1" value = "${dto.member_bno }" class="form-control" aria-describedby="basic-addon1" >ê¸€ë²ˆí˜¸ : ${dto.member_bno }</td>
   </tr>
 
 
@@ -156,17 +153,16 @@ alert("ÇØ´ç ±ÛÀ» ÃßÃµÇÏ¿´½À´Ï´Ù.")
     <td>
       <input name="title" id="title" size="80"
       value="${dto.title}"
-      placeholder="Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä" class="form-control" aria-describedby="basic-addon1" ></td>
+      placeholder="ì œëª©ì„ ì…ë ¥í•˜ì„¸ìš”" class="form-control" aria-describedby="basic-addon1" ></td>
     </tr>
 
     <br><br>
 
-    <!-- placeholderÀº Á¦¸ñÀ» ÀÔ·ÂÇÒ ¼ö ÀÖµµ·Ï µµ¿ò¸»À» Ãâ·ÂÇÔ -->
     <tr>
       <div style="width:800px;">
         <td>
           <textarea class="form-control" id="content" name="content" rows="3" cols="80"
-          placeholder="³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä">${dto.content}</textarea>
+          placeholder="ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”">${dto.content}</textarea>
         </td>
       </div>
     </tr>
@@ -180,10 +176,7 @@ alert("ÇØ´ç ±ÛÀ» ÃßÃµÇÏ¿´½À´Ï´Ù.")
 
 
 
-<!-- ¸¶Âù°¡Áö·Î ³»¿ëÀ» ÀÔ·ÂÇÏµµ·Ï µµ¿ò¸»À» Ãâ·ÂÇÔ -->
 <script>
-// ckeditor Àû¿ë
-//id°¡ contentÀÎ ÅÂ±× (±ÛÀÇ ³»¿ëÀ» ÀÔ·ÂÇÏ´Â ÅÂ±×)¸¦ ck¿¡µğÅÍ¸¦ Àû¿ëÇÑ´Ù´Â ÀÇ¹Ì
 CKEDITOR.replace("content",{
 height: "300px"
 });
@@ -193,93 +186,26 @@ height: "300px"
 });
 </script>
 
-<div style = "width:700px; text-align:center;">
-  <!-- ¼öÁ¤, »èÁ¦¿¡ ÇÊ¿äÇÑ ±Û¹øÈ£¸¦ hidden ÅÂ±×¿¡ ÀúÀåÇÑ´Ù. -->
-  <input type = "hidden" name = "member_bno" value = "${dto.member_bno }">
-
-  <!-- º»ÀÎ¸¸ ¼öÁ¤, »èÁ¦ ¹öÆ°À» Ç¥½ÃÇÑ´Ù. -->
-  <c:if test = "${sessionScope.user_id == dto.user_id or sessionScope.navername == dto.user_id or sessionScope.kakaonickname == dto.user_id or sessionScope.facebookname == dto.user_id}">
+  <!-- ê¸€ëª©ë¡ì€ ë³¸ì¸ì´ ì•„ë‹ˆì–´ë„ í™•ì¸ ê°€ëŠ¥í•˜ê²Œ í•œë‹¤. -->
   <div class="btn-group btn-group-sm" role="group" aria-label="...">
     <div style = "text-align:center;" >
 
-      <button type = "submit" id = "btnUpdate" class="btn btn-default">¼öÁ¤</button>
-      <button type = "button" id = "btnDelete" class="btn btn-default">»èÁ¦</button>
+      <button type = "button" id = "btnList" class="btn btn-default">ëª©ë¡</button>
+    </div>
+  </div>
 
+
+  <!-- ëŒ“ê¸€ì“°ê¸° ë²„íŠ¼ì„ í´ë¦­í•˜ë©´ ìœ„ìª½ì— ìˆëŠ” ìë°”ìŠ¤í¬ë¦½íŠ¸ êµ¬ë¬¸ì´ ì‹¤í–‰ë˜ì–´ì„œ ì»¨íŠ¸ë¡¤ëŸ¬ë¡œ ë§µí•‘ë¨ --><br><br>
+  <div class="btn-group btn-group-sm" role="group" aria-label="...">
+    <div style = "text-align:center;" >
+
+      <button type = "button" id = "btnReply" class="btn btn-default" >ëŒ“ê¸€ì“°ê¸°</button>
     </div>
   </div>
   </c:if>
 
-
-  <!-- °ü¸®ÀÚ¿¡°Ô´Â »èÁ¦ ¹öÆ°À» Ç¥½ÃÇÑ´Ù. -->
-  <c:if test = "${sessionScope.admin_id != null}">
-
-  <div class="btn-group btn-group-sm" role="group" aria-label="...">
-    <div style = "text-align:center;" >
-      <button type = "button" id = "btnDelete" class="btn btn-default">»èÁ¦</button>
-    </div>
-  </div>
-  </c:if>
-
-
-  <!-- ·Î±×ÀÎÀÌ µÇ¾îÀÖ°í, º»ÀÎ ±ÛÀÌ ¾Æ´Ò°æ¿ì¿¡¸¸ ÃßÃµÇÒ ¼ö ÀÖµµ·Ï ¹öÆ°À» Ãâ·Â -->
-  <c:if test = "${sessionScope.user_id != null and sessionScope.user_id != dto.user_id
-  or sessionScope.navername != null and sessionScope.navername != dto.user_id
-  or sessionScope.kakaonickname != null and sessionScope.kakaonickname != dto.user_id
-  or sessionScope.facebookname != null and sessionScope.facebookname != dto.user_id}">
-  <div class="btn-group btn-group-sm" role="group" aria-label="...">
-    <div style = "text-align:center;" >
-
-      <button type = "button" id = "btnRecommend" class="btn btn-default" >ÃßÃµÇÏ±â</button>
-    </div>
-  </div>
-
-  </c:if>
-
-  <!-- °ü¸®ÀÚ¿¡°Ôµµ ÃßÃµ ¹öÆ° Ãâ·Â -->
-  <!-- °ü¸®ÀÚ¿¡°Ô´Â »èÁ¦ ¹öÆ°À» Ç¥½ÃÇÑ´Ù. -->
-  <c:if test = "${sessionScope.admin_id != null}">
-
-  <div class="btn-group btn-group-sm" role="group" aria-label="...">
-    <div style = "text-align:center;" >
-      <button type = "button" id = "btnRecommend" class="btn btn-default" >ÃßÃµÇÏ±â</button>
-
-    </div>
-  </div>
-  </c:if>
-
-
-  <!-- ±Û¸ñ·ÏÀº º»ÀÎÀÌ ¾Æ´Ï¾îµµ È®ÀÎ °¡´ÉÇÏ°Ô ÇÑ´Ù. -->
-  <div class="btn-group btn-group-sm" role="group" aria-label="...">
-    <div style = "text-align:center;" >
-
-      <button type = "button" id = "btnList" class="btn btn-default">¸ñ·Ï</button>
-    </div>
-  </div>
-
-  <!-- ·Î±×ÀÎÀÌ µÇ¾îÀÖ´Â »óÅÂ¿¡¼­¸¸ ´ñ±Û ÀÛ¼º ¹öÆ°ÀÌ Ãâ·ÂµÇµµ·Ï ÇÑ´Ù. -->
-
-  <c:if test = "${sessionScope.user_id != null or sessionScope.navername != null
-  or sessionScope.kakaonickname != null or sessionScope.facebookname != null}">
-  <br><br><br>
-  <div class="btn-group btn-group-sm" role="group" aria-label="...">
-    <div style = "text-align:center;" >
-      <textarea rows = "5" cols = "80" id = "r_content" name = "r_content" class="form-control" aria-describedby="basic-addon1" placeholder="´ñ±ÛÀ» ÀÔ·ÂÇÏ¼¼¿ä."></textarea>
-    </div>
-  </div>
-  <br>
-
-
-  <!-- ´ñ±Û¾²±â ¹öÆ°À» Å¬¸¯ÇÏ¸é À§ÂÊ¿¡ ÀÖ´Â ÀÚ¹Ù½ºÅ©¸³Æ® ±¸¹®ÀÌ ½ÇÇàµÇ¾î¼­ ÄÁÆ®·Ñ·¯·Î ¸ÊÇÎµÊ --><br><br>
-  <div class="btn-group btn-group-sm" role="group" aria-label="...">
-    <div style = "text-align:center;" >
-
-      <button type = "button" id = "btnReply" class="btn btn-default" >´ñ±Û¾²±â</button>
-    </div>
-  </div>
-  </c:if>
-
-  <!-- ´ñ±Û ¸ñ·Ï -->
-  <!-- ´ñ±ÛÀÌ µî·ÏÀÌ µÇ¸é listReply¿¡ ´ñ±ÛÀÌ ½×ÀÌ°Ô µÈ´Ù. -->
+  <!-- ëŒ“ê¸€ ëª©ë¡ -->
+  <!-- ëŒ“ê¸€ì´ ë“±ë¡ì´ ë˜ë©´ listReplyì— ëŒ“ê¸€ì´ ìŒ“ì´ê²Œ ëœë‹¤. -->
   <div id = "listReply"></div>
 
   <body>
